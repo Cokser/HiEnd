@@ -1,0 +1,16 @@
+$web-width: 567px;
+$base-font: "Liberation Sans";
+$base-color: #673ab7;
+
+.default {
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+}
+
+.auth-container {
+  margin: 0 auto;
+  max-width: $web-width;
+  padding: 15px;
+}

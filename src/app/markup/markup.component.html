@@ -1,0 +1,191 @@
+<div class="markup-container">
+  <div class="overlay" *ngIf="popupFlag" (click)="popupFlag = false"></div>
+  <div class="markup-header container-fluid">
+    <header class="header">
+      <div class="nav-container row">
+        <nav class="navbar navbar-expand-lg navbar-light container">
+          <a href="#" class="navbar-brand">
+            <img src="/assets/images/logo.png" alt="logo">
+          </a>
+          <button class="navbar-toggler d-lg-none"
+                  type="button"
+                  (click)="onToggleMenu()"
+                  aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-end"
+               [ngClass]="{'toggleMenuStyle': toggleMenu === true}">
+            <ul class="navbar-nav navbar-menu">
+              <li class="nav-item active">
+                <a class="nav-link" href="#">Aknowledge</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Goals</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Motivation board</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Community</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Empower your Story</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Letters</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Blog</a>
+              </li>
+              <li class="nav-item d-flex align-items-center">
+                <button class="nav-profile" type="button">Yulia Kallaur</button>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+      <div class="row">
+        <h3 class="header-inscription container">Aсknowledge</h3>
+      </div>
+      <div class="row">
+        <h1 class="header-title">Aсknowledge</h1>
+      </div>
+    </header>
+  </div>
+  <div class="markup-main container-fluid">
+    <article class="main-article d-flex flex-column">
+      <div class="row d-flex justify-content-center">
+        <h3 class="article-title">Value and benefits</h3>
+      </div>
+      <div class="row">
+        <figure class="container d-flex justify-content-center">
+          <img class="article-separator" src="assets/images/separator.png" alt="separator">
+        </figure>
+      </div>
+      <div class="row d-flex justify-content-center">
+        <figure class="container">
+          <img class="article-img" src="assets/images/main-img.png" alt="main">
+        </figure>
+      </div>
+      <div class="container">
+        <ul class="article-list">
+          <li class="article-list-item">
+            Personal Development
+            <p class="list-description">
+              Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.
+              Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis,
+              ultricies nec, pellentesque eu, pretium quis, sem.
+              <br><br>
+              Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In
+              enim
+              justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretiumnteger
+              tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo
+              ligula,
+              porttitor eu, consequat vitae, eleifend ac, enim.
+              <br><br>
+              Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius
+              laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. </p>
+          </li>
+          <li class="article-list-item">
+            Family
+            <p class="list-description">
+              Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean
+              leo
+              ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis,
+              feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet.
+              Etiam
+              ultricies nisi vel augue.
+            </p>
+          </li>
+          <li class="article-list-item">
+            Friendship
+            <p class="list-description">
+              Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.
+              Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis,
+              ultricies nec, pellentesque eu, pretium quis, sem.
+            </p>
+          </li>
+          <li class="article-list-item">
+            Loyality
+            <p class="list-description">
+              Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In
+              enim
+              justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.
+            </p>
+          </li>
+        </ul>
+      </div>
+      <div class="row">
+        <div class="article-options container d-flex justify-content-between">
+          <div class="left-buttons">
+            <div class="popup-container">
+              <div class="popup-add" *ngIf="popupFlag">
+                <div class="container d-flex justify-content-center">
+                  <form >
+                    <p class="popup-header">Add Value</p>
+                    <div class="form-group">
+                      <label for="popup-title">Title</label>
+                      <input class="form-control popup-title" type="text" id="popup-title">
+                    </div>
+                    <div class="form-group">
+                      <label for="popup-description">Description</label>
+                      <textarea class="popup-description" id="popup-description"></textarea>
+                    </div>
+                    <div class="popup-options">
+                      <button type="button" (click)="popupFlag = !popupFlag" class="option-btn">Save</button>
+                      <button type="button" (click)="popupFlag = !popupFlag" class="cancel-btn">Cancel</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+            <button class="option-btn" (click)="popupFlag = !popupFlag" type="button">Add value</button>
+          </div>
+          <div class="right-buttons d-flex justify-content-between">
+            <button class="option-btn right-btn ">Share</button>
+            <button class="option-btn right-btn">Print</button>
+            <button class="option-btn right-btn">Edit</button>
+          </div>
+        </div>
+      </div>
+    </article>
+  </div>
+  <div class="footer-container container-fluid">
+    <footer class="footer row">
+      <div class="footer-info container d-flex">
+        <div class="left-info-block">
+          <div class="footer-shape"></div>
+          <p class="copyright">
+            © 2016 Life Key inc.
+            <br>
+            Service of goals definition and management </p>
+        </div>
+        <nav class="footer-nav navbar navbar-expand-lg justify-content-end container">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link footer-nav-link" href="#">Aknowledge</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link footer-nav-link" href="#">Goals</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link footer-nav-link" href="#">Motivation board</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link footer-nav-link" href="#">Community</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link footer-nav-link" href="#">Empower your Story</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link footer-nav-link" href="#">Letters</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link footer-nav-link" href="#">Blog</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </footer>
+  </div>
+</div>

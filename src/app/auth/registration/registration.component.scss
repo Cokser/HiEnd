@@ -1,0 +1,22 @@
+$web-width: 567px;
+$base-font: "Liberation Sans";
+$base-color: #673ab7;
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.form-input {
+
+  & {
+    font-family: $base-font;
+    font-size: 20px;
+  }
+}
+
+.login-btn {
+  display: flex;
+}

@@ -1,0 +1,39 @@
+<h1>Registration!</h1>
+<form [formGroup]="singUpForm" novalidate (ngSubmit)="onSubmit()">
+  <div class="form-group">
+    <label for="name">Имя</label>
+    <input class="form-control"
+           id="name" type="text"
+           formControlName="userName"/>
+    <app-validator-messages *ngIf="formSubmitAttempt" [field]="singUpForm.controls['userName']"></app-validator-messages>
+  </div>
+  <div class="form-group">
+    <label for="login">Логин</label>
+    <input class="form-control"
+           id="login" type="text"
+           formControlName="userLogin"/>
+    <app-validator-messages *ngIf="formSubmitAttempt" [field]="singUpForm.controls['userLogin']"></app-validator-messages>
+  </div>
+  <div class="form-group">
+    <label for="email">Email</label>
+    <input class="form-control"
+           id="email" type="text"
+           formControlName="userEmail"/>
+    <app-validator-messages *ngIf="formSubmitAttempt" [field]="singUpForm.controls['userEmail']"></app-validator-messages>
+  </div>
+  <div class="form-group">
+    <label for="password">Пароль</label>
+    <input class="form-control"
+           id="password" type="password"
+           formControlName="userPassword"/>
+    <app-validator-messages *ngIf="formSubmitAttempt" [field]="singUpForm.controls['userPassword']"></app-validator-messages>
+  </div>
+  <div class="form-group">
+    <label for="password-repeat">повторите пароль</label>
+    <input class="form-control"
+           id="password-repeat" type="password"
+           formControlName="passwordConfirm"/>
+    <app-validator-messages *ngIf="formSubmitAttempt" [field]="singUpForm.controls['passwordConfirm']"></app-validator-messages>
+  </div>
+  <button type="submit" class="btn btn-default">Submit</button>
+</form>

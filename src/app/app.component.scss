@@ -1,0 +1,9 @@
+$web-width: 546px;
+
+.main-container {
+  //margin-left: 200px;
+
+  @media (max-width: $web-width) {
+    margin: 0 auto;
+  }
+}

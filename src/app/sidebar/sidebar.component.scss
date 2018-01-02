@@ -1,0 +1,56 @@
+$web-width: 546px;
+
+.base-text {
+  font-family: "Liberation Sans";
+  color: #fff;
+}
+
+.sidebar-container {
+  left: -193px;
+  z-index: 200;
+  background: rgba(49, 132, 150, 0.8);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  position: fixed;
+  height: 100%;
+  width: 200px;
+
+  &:hover {
+    left: 0;
+    transition: 0.5s;
+  }
+}
+
+.menu {
+  width: 100%;
+}
+
+.menu-nav {
+  display: flex;
+  flex-direction: column;
+}
+
+.nav-link {
+  @extend .base-text;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  width: 100%;
+  height: 50px;
+
+  @media (max-width: $web-width) {
+    align-items: center;
+    flex-direction: row;
+    padding: 0 10px 0 10px;
+  }
+}
+
+.sidebar-title {
+  @extend .base-text;
+}
+
+.nav-item:hover {
+  background: #35b9cb;
+}
